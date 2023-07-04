@@ -56,9 +56,14 @@ const INITIAL_TODOS = {
 };
 
 const yDoc = new Y.Doc();
-new YProvider("yjs.threepointone.partykit.dev", "yjs-demo", yDoc, {
-  connect: true,
-});
+new YProvider(
+  "yjs.threepointone.partykit.dev",
+  "partykit-tinybase-demo",
+  yDoc,
+  {
+    connect: true,
+  }
+);
 
 const App = () => {
   const store = useCreateStore(() => createStore().setTablesSchema(SCHEMA));
