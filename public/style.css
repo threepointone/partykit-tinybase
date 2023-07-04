@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Inter;
+  src: url(https://tinybase.org/fonts/inter.woff2) format("woff2");
+}
+#app {
+  display: grid;
+  grid-template-columns: 35% minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  letter-spacing: -0.04rem;
+  grid-gap: 1rem 0.5rem;
+  margin: 0;
+  min-height: 100vh;
+  padding: 1rem;
+}
+#app * {
+  box-sizing: border-box;
+  outline-color: #d81b60;
+}
+#newTodo {
+  border: 1px solid #ccc;
+  display: block;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 0.5rem;
+  width: 100%;
+}
+#todos {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  margin: 0;
+  padding: 0;
+}
+#todos .todo {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+#todos .todo .text {
+  cursor: pointer;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  white-space: nowrap;
+}
+#todos .todo .text::before {
+  content: "\1F7E0";
+  padding: 0 0.5rem 0 0.25rem;
+}
+#todos .todo .text.done {
+  color: #ccc;
+}
+#todos .todo .text.done::before {
+  content: "\2705";
+}
+#types {
+  margin: 0;
+}
+#types .type {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+#types .type.current {
+  color: #d81b60;
+}
+#todos .todo .type {
+  border: none;
+  color: #777;
+  font: inherit;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
+}
+#undoRedo {
+  grid-column: 1;
+  grid-row: 3;
+}
+#undoRedo #undo,
+#undoRedo #redo {
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+#undoRedo #undo::before,
+#undoRedo #redo::before {
+  padding-right: 0.5rem;
+  vertical-align: middle;
+}
+#undoRedo #undo.disabled,
+#undoRedo #redo.disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+#undoRedo #undo::before {
+  content: "\21A9";
+}
+#undoRedo #redo::before {
+  content: "\21AA";
+}

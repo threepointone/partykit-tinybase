@@ -1,0 +1,13 @@
+diff --git a/node_modules/wrangler/wrangler-dist/cli.js b/node_modules/wrangler/wrangler-dist/cli.js
+index 30c7c2c..44b7b3a 100644
+--- a/node_modules/wrangler/wrangler-dist/cli.js
++++ b/node_modules/wrangler/wrangler-dist/cli.js
+@@ -124356,7 +124356,7 @@ async function getRegisteredWorkers() {
+     if (!["ECONNRESET", "ECONNREFUSED"].includes(
+       e2.cause?.code || "___"
+     )) {
+-      throw e2;
++      // throw e2;
+     }
+   }
+ }

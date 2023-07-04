@@ -1,0 +1,7 @@
+name = "tinybase-todo-sync"
+assets = "./public"
+compatibility_date = "2023-05-18"
+
+[build] 
+command = "npm run build"
+ 
