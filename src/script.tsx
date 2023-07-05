@@ -1,16 +1,17 @@
+import * as React from "react";
+import { useCallback, useState } from "react";
+import { createRoot } from "react-dom/client";
+
+import * as Y from "yjs";
+import YProvider from "y-partykit/provider";
+
 import * as TinyBase from "tinybase";
 import {
   createLocalPersister,
   createSessionPersister,
 } from "tinybase/lib/persisters/persister-browser";
 
-import * as Y from "yjs";
-import YProvider from "y-partykit/provider";
-
 import { createYjsPersister } from "tinybase/lib/persisters/persister-yjs";
-import * as React from "react";
-import { createRoot } from "react-dom/client";
-import { useCallback, useState } from "react";
 
 const { createCheckpoints, createIndexes, createMetrics, createStore } =
   TinyBase;
